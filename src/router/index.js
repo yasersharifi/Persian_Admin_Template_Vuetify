@@ -5,6 +5,7 @@ import Alerts from "../views/Alerts";
 import Orders from "../views/Orders";
 import Setting from "../views/Setting";
 import Profile from "../views/Profile";
+import Cards from "../views/Cards";
 
 Vue.use(VueRouter)
 
@@ -27,6 +28,7 @@ const routes = [
   {path: '/products', name: 'Products', component: Orders},
   {path: '/setting', name: 'Setting', component: Setting},
   {path: '/profile', name: 'Profile', component: Profile},
+  {path: '/cards', name: 'Cards', component: Cards},
 ]
 
 const router = new VueRouter({

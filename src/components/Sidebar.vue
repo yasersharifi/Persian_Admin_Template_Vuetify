@@ -59,7 +59,7 @@ export default {
                 {icon: "mdi-alert-box-outline", title: "پیام هشدار", route: "Alerts"},
                 {icon: "mdi-table-large", title: "جدول", route: "Alerts"},
                 {icon: "mdi-gesture-tap-button", title: "دکمه ها", route: "Alerts"},
-                {icon: "mdi-card-outline", title: "کارت ها", route: "Alerts"},
+                {icon: "mdi-card-outline", title: "کارت ها", route: "Cards"},
                 {icon: "mdi-play-box-outline", title: "اسلایدر", route: "Alerts"},
                 {icon: "mdi-baby-face", title: "آیکون ها", route: "Alerts"},
                 {icon: "mdi-baby-face", title: "وبلاگ", route: "Alerts"},
