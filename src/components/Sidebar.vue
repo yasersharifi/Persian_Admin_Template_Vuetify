@@ -4,6 +4,8 @@
         app
         right
         fixed
+        :color="$store.state.sideBar.color"
+        :dark="$store.state.sideBar.dark"
     >
         <div class="self__area pa-4" style="height: 180px">
             <ul class="self__circles">

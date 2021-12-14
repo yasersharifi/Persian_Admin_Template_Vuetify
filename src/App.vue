@@ -12,17 +12,25 @@
                 <router-view />
             </v-container>
         </v-main>
+
+        <SettingSidebar @convertToDarkTheme="changeTheme" />
     </v-app>
 </template>
 
 <script>
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
+import SettingSidebar from "./components/SettingSidebar";
 export default {
-    components: {Sidebar, Header},
+    components: {SettingSidebar, Sidebar, Header},
     data: () => ({
         cards: ['Today', 'Yesterday'],
         drawer: true,
     }),
+    methods: {
+        changeTheme: function () {
+            this.$vuetify.theme.dark = ! this.$vuetify.theme.dark;
+        }
+    },
 }
 </script>

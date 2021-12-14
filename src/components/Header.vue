@@ -1,7 +1,8 @@
 <template>
     <v-app-bar
         app
-        color="white"
+        :color="$store.state.header.color"
+        :dark="$store.state.header.dark"
         elevation="1"
     >
         <v-app-bar-nav-icon @click="$emit('handleDrawer')"></v-app-bar-nav-icon>
