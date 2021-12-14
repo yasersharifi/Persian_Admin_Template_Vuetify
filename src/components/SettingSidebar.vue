@@ -40,11 +40,25 @@
                     </v-list-item>
                     <v-divider></v-divider>
                     <v-list-item>
-                        <v-icon color="dark" @click="headerColor('dark')">mdi-circle</v-icon>
-                        <v-icon color="red">mdi-circle</v-icon>
-                        <v-icon color="blue">mdi-circle</v-icon>
-                        <v-icon color="purple">mdi-circle</v-icon>
-                        <v-icon color="white">mdi-circle</v-icon>
+                        <v-icon color="black" @click="headerColor('black', true)">mdi-circle</v-icon>
+                        <v-icon color="red" @click="headerColor('red', true)">mdi-circle</v-icon>
+                        <v-icon color="blue" @click="headerColor('blue', true)">mdi-circle</v-icon>
+                        <v-icon color="purple" @click="headerColor('purple', true)">mdi-circle</v-icon>
+                        <v-icon color="white" @click="headerColor('white', false)">mdi-circle</v-icon>
+                    </v-list-item>
+                </v-list>
+
+                <v-list>
+                    <v-list-item>
+                        <v-list-item-title>ساید بار</v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                        <v-icon color="black" @click="sidebarColor('black', true)">mdi-circle</v-icon>
+                        <v-icon color="red" @click="sidebarColor('red', true)">mdi-circle</v-icon>
+                        <v-icon color="blue" @click="sidebarColor('blue', true)">mdi-circle</v-icon>
+                        <v-icon color="purple" @click="sidebarColor('purple', true)">mdi-circle</v-icon>
+                        <v-icon color="white" @click="sidebarColor('white', false)">mdi-circle</v-icon>
                     </v-list-item>
                 </v-list>
 
@@ -68,13 +82,21 @@ import {mapState} from "vuex";
 
 export default {
     name: "SettingSidebar",
+    data: function () {
+        return {
+            menu: false,
+        }
+    },
     methods: {
-        headerColor: function () {
-
+        headerColor: function (color, dark) {
+            this.$store.commit('changeHeaderStyle', [color, dark]);
+        },
+        sidebarColor: function (color, dark) {
+            this.$store.commit('changeSideBarStyle', [color, dark]);
         }
     },
     computed: mapState({
-        menu: state => {return state.settingSidebarMenu}
+
     }),
 }
 </script>

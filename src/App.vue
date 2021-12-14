@@ -30,6 +30,20 @@ export default {
     methods: {
         changeTheme: function () {
             this.$vuetify.theme.dark = ! this.$vuetify.theme.dark;
+
+            if (this.$store.state.header.color !== "black") {
+                this.$store.state.header.color = "black";
+            } else {
+                this.$store.state.header.color = "white";
+            }
+
+            if (this.$store.state.sideBar.color !== "black") {
+                this.$store.state.sideBar.color = "black";
+            } else {
+                this.$store.state.sideBar.color = "white";
+            }
+            this.$store.state.header.dark = ! this.$store.state.header.dark;
+            this.$store.state.sideBar.dark = ! this.$store.state.sideBar.dark;
         }
     },
 }
